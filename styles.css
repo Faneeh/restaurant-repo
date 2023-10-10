@@ -14,21 +14,23 @@ body {
     background: url(img.jpg);
     background-size: cover;
     background-position: 50% 70%;
+    overflow: hidden;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    font-weight: 700;
     font-size: 35px;
     margin-top: 15px;
     margin: 30px;
 }
 
 .link-logo {
+    font-size: 75px;
+    font-weight: 700;
+    text-decoration: none;
     display: inline-block;
     position: relative;
-    color: #fff;
 }
 
 .link-logo::after {
@@ -40,39 +42,64 @@ body {
     bottom: 0;
     left: 0;
     background-color: whitesmoke;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
 }
 .link-logo:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: center;
 }
 
-.navbar .links {
-    display: flex;
+.links {
+    display: block;
     width: 13%;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-.link-logo {
-    text-decoration: none;
-    font-size: 75px;
 }
 
 .link1 {
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin-left: 10%;
 }
 
-.link1:hover {
-    text-decoration: underline;
+.link1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+.link1:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 .link2 {
     text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin-left: 30%;
 }
 
-.link2:hover {
-    text-decoration: underline; 
+.link2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+.link2:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
